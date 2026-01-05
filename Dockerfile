@@ -1,5 +1,5 @@
 # Inspired by https://raw.githubusercontent.com/astral-sh/uv-docker-example/refs/heads/main/multistage.Dockerfile
-FROM python:3.13-slim AS builder
+FROM python:3.14-slim AS builder
 COPY --from=ghcr.io/astral-sh/uv:latest /uv /usr/local/bin/uv
 
 ENV UV_COMPILE_BYTECODE=1 UV_LINK_MODE=copy
@@ -22,7 +22,7 @@ RUN --mount=type=cache,target=/root/.cache/uv \
 
 
 # This should be the same image as the "builder" one.
-FROM python:3.13-slim
+FROM python:3.14-slim
 
 ENV PATH=/app/.venv/bin:$PATH \
     PYTHONUNBUFFERED=1
