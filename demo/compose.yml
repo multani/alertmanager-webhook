@@ -1,0 +1,24 @@
+services:
+  webhook:
+    build:
+      context: ../
+  prometheus:
+    image: prom/prometheus:v3.5.0
+    network_mode: host
+    volumes:
+      - ./config/prometheus/:/etc/prometheus/
+    command:
+      - "--config.file=/etc/prometheus/prometheus.yml"
+      - "--web.listen-address=:19090"
+      - "--log.level=debug"
+
+  alertmanager:
+    image: prom/alertmanager:v0.28.1
+    network_mode: host
+    volumes:
+      - ./config/alertmanager/:/etc/alertmanager/
+    command:
+      - "--config.file=/etc/alertmanager/alertmanager.yml"
+      - "--web.listen-address=:19091"
+      - "--log.level=debug"
+

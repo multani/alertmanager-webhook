@@ -8,8 +8,8 @@ fmt:
 	uv run ruff check --fix
 
 .PHONY: check
-check:
-	uv run pytest --mypy --ruff --ruff-format
+check: test mypy
+
 
 .PHONY: test
 test:

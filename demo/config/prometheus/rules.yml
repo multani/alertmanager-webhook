@@ -1,0 +1,14 @@
+groups:
+  - name: test
+    interval: 5s
+    labels: {}
+    rules:
+      - alert: SomethingTooHigh
+        expr: |-
+          vector(1) > 0
+        for: 0m
+        labels:
+          severity: page
+          team: my-team
+        annotations:
+          summary: The something is too high

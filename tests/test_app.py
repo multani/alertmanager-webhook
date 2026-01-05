@@ -1,6 +1,6 @@
+import alertmanager_webhook
+
+
 def test_1() -> None:
-    import NAME
-
-    NAME
-
+    alertmanager_webhook
     assert True

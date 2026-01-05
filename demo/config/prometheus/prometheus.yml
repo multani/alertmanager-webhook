@@ -1,0 +1,15 @@
+global:
+  scrape_interval: 15s
+  evaluation_interval: 15s
+
+  external_labels:
+    environment: test
+
+alerting:
+  alertmanagers:
+    - static_configs:
+      - targets:
+        - "localhost:19091"
+
+rule_files:
+  - rules.yml

@@ -1,0 +1,8 @@
+slack:
+  token: xxx
+
+web:
+  port: 5000
+
+alertmanager:
+  url: "http://localhost:19091"

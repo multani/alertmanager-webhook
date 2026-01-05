@@ -1,5 +1,1 @@
-.coverage
-.mypy_cache/
-.pytest_cache/
-htmlcov/
-.venv/
+config.yaml
