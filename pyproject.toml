@@ -1,0 +1,69 @@
+[project]
+name = "NAME"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "Jonathan Ballet", email = "jon@multani.info" }
+]
+requires-python = ">=3.13"
+dependencies = [
+    "click==8.3.1",
+    "structlog==25.5.0",
+]
+
+[project.scripts]
+my-script = "NAME.cli:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[dependency-groups]
+dev = [
+    "mypy==1.19.1",
+    "pytest==9.0.2",
+    "pytest-cov==7.0.0",
+    "pytest-mypy==1.0.1",
+    "pytest-ruff==0.5",
+    "ruff==0.14.10",
+]
+
+[tool.pytest]
+addopts = [
+    "--cov=NAME",
+    "--cov-branch",
+    "--cov-report=html",
+    "--cov-report=term",
+    "--doctest-modules",
+    "--ruff",
+    "--ruff-format",
+    "--tb=short",
+    "--verbose",
+    "--verbose",
+    "--mypy",
+]
+testpaths = [
+    "NAME",
+    "tests",
+]
+
+[tool.mypy]
+packages = [
+    "NAME",
+    "tests",
+]
+strict = true
+
+[tool.ruff.lint]
+ignore = [
+    # It's OK to have long line
+    "E501",
+]
+extend-select = [
+    # Sort imports
+    "I",
+]
+
+[tool.ruff.lint.isort]
+force-single-line = true
