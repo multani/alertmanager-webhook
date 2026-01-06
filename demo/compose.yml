@@ -3,7 +3,7 @@ services:
     build:
       context: ../
   prometheus:
-    image: prom/prometheus:v3.8.1
+    image: prom/prometheus:v3.9.0
     network_mode: host
     volumes:
       - ./config/prometheus/:/etc/prometheus/
