@@ -17,7 +17,7 @@ dependencies = [
     "slack-sdk==3.42.0",
     "starlette==1.1.0",
     "structlog==25.5.0",
-    "uvicorn==0.47.0",
+    "uvicorn==0.48.0",
 ]
 
 [project.scripts]
