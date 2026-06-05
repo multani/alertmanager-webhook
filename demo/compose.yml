@@ -13,7 +13,7 @@ services:
       - "--log.level=debug"
 
   alertmanager:
-    image: prom/alertmanager:v0.32.1
+    image: prom/alertmanager:v0.32.2
     network_mode: host
     volumes:
       - ./config/alertmanager/:/etc/alertmanager/
