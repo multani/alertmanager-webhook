@@ -12,7 +12,7 @@ dependencies = [
     "click==8.5.1",
     "httpx==0.28.1",
     "prometheus-client==0.26.0",
-    "pydantic==2.14.3",
+    "pydantic==2.14.4",
     "pyyaml==6.0.3",
     "slack-sdk==3.47.0",
     "starlette==1.10.0",
